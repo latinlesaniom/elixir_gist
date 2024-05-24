@@ -1,3 +1,4 @@
+
 defmodule ElixirGist.Accounts.User do
   use Ecto.Schema
   import Ecto.Changeset
@@ -9,7 +10,7 @@ defmodule ElixirGist.Accounts.User do
     field :hashed_password, :string, redact: true
     field :confirmed_at, :naive_datetime
     has_many :gists, ElixirGist.Gists.Gist
-    timestamps(type: :utc_datetime)
+    timestamps()
   end
 
   @doc """
